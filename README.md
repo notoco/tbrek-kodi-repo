@@ -9,5 +9,10 @@ The following addons are available here:
 - [__IPTV Archive Downloader__](master/datadir/plugin.video.iptv.archive.downloader/plugin.video.iptv.archive.downloader-0.2.0.zip) plugin.video.iptv.archive.downloader v0.2.0
 - [__tbrek/tbrek-kodi-repo Repository__](master/datadir/repository.tbrek.tbrek-kodi-repo/repository.tbrek.tbrek-kodi-repo-1.0.1.zip) repository.tbrek.tbrek-kodi-repo v1.0.1
 
+[__matrix__](matrix/addons.xml) (Kodi ver. 19.0.0):
+
+- [__IPTV Archive Downloader__](matrix/datadir/plugin.video.iptv.archive.downloader/plugin.video.iptv.archive.downloader-0.2.0.zip) plugin.video.iptv.archive.downloader v0.2.0
+- [__tbrek/tbrek-kodi-repo Repository__](matrix/datadir/repository.tbrek.tbrek-kodi-repo/repository.tbrek.tbrek-kodi-repo-1.0.1.zip) repository.tbrek.tbrek-kodi-repo v1.0.1
+
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``752dd63``](https://github.com/tbrek/tbrek-kodi-repo/commit/752dd63441aeaadd201b09c2c5dcc007e29d6aa2)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``2f63baa``](https://github.com/tbrek/tbrek-kodi-repo/commit/2f63baa5984f8c065e2fffe9fb689fb5643d0662)
