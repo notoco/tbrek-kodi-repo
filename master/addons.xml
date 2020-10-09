@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<addons><addon id="plugin.video.iptv.archive.downloader" name="IPTV Archive Downloader" provider-name="tbrek" version="0.2.0">
+  <requires>
+    <import addon="xbmc.python" version="2.2.0" />
+    <import addon="script.module.xbmcswift2" version="2.4.0" />
+    <import addon="script.module.requests" version="2.9.1" />
+    <import addon="script.module.chardet" />
+    <import addon="script.module.pytz" />
+    <import addon="script.module.dateutil" />
+    <import addon="script.module.kodi-six" />
+  </requires>
+  <extension library="main.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension library="default.py" point="xbmc.python.script">
+    <provides>executable</provides>
+  </extension>
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+      <item library="listDownload.py">
+        <label>Download using timeframe</label>
+        <visible>Window.isActive(tvchannels)</visible>
+      </item>
+      <item library="epgDownload.py">
+        <label>Download from Archive</label>
+        <visible>Window.isActive(tvguide)</visible>
+      </item>
+    </menu>
+  </extension>
+  <extension library="server.py" point="xbmc.service" start="login" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Download from IPTV Simple Client with ffmpeg.</summary>
+    <description lang="en">
+Set your recording path and ffmpeg location and adjust timezone in M3U section.
+On Android ffmpeg will be copied to /data/data to be runnable.
+ffmpeg simply copies the stream into a transport stream container.
+
+By defult stream is splitted into 1h parts, then they're merged, as some
+IPTV providers close the streams in archive after 1h.
+
+    </description>
+    <disclaimer lang="en">Make sure recording streams is legal in your country.</disclaimer>
+    <source>https://github.com/tbrek/IPTV-Archive-Downloader</source>
+    <forum />
+    <language>en</language>
+    <news>
+version 0.2.0
+
+Added option to record timeframe from channel list
+
+
+version 0.1.0
+
+Initial version.
+    </news>
+    <assets>
+      <icon>icon.png</icon>
+      <screenshot>resources/screenshots/screenshot-00.png</screenshot>
+      <screenshot>resources/screenshots/screenshot-01.png</screenshot>
+    </assets>
+  </extension>
+</addon><addon id="repository.tbrek.tbrek-kodi-repo" name="tbrek/tbrek-kodi-repo Repository" provider-name="tbrek" version="1.0.1">
+    <extension point="xbmc.addon.repository">
+        
+        <dir minversion="18.0.0">
+            <info compressed="false">https://tbrek.github.io/tbrek-kodi-repo/master/addons.xml</info>
+            <checksum>https://tbrek.github.io/tbrek-kodi-repo/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://tbrek.github.io/tbrek-kodi-repo/master/datadir/</datadir>
+        </dir>
+
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">A personal Kodi addon repository from https://github.com/tbrek/tbrek-kodi-repo</summary>
+        <description lang="en_GB" />
+        <language />
+        <platform>all</platform>
+        <license>GPL-3.0</license>
+        <forum />
+        <source />
+        <news />
+        <disclaimer />
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart />
+        </assets>
+    </extension>
+</addon></addons>
